@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaghaa Londhe - Data Engineer & GenAI Enthusiast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #cbd5e0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .duration {
+            color: #718096;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .experience-item li::before {
+            content: '▶';
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+
+        .contact-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #4a5568;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 250px;
+                height: 250px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Anaghaa Londhe</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Anaghaa Londhe</h1>
+                    <p class="subtitle">Data Engineer | GenAI Enthusiast</p>
+                    <p class="description">
+                        Data Engineer passionate about leveraging Generative AI to transform how we build and scale data systems. 
+                        I combine traditional data engineering expertise with cutting-edge GenAI technologies to create 
+                        intelligent, automated data solutions that drive business innovation.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="https://linkedin.com/in/anaghaa-londhe" class="btn btn-secondary" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='140' fill='%23f0f0f0' stroke='%23ddd' stroke-width='2'/%3E%3Ctext x='150' y='155' text-anchor='middle' font-family='Arial' font-size='14' fill='%23666'%3EYour Photo Here%3C/text%3E%3C/svg%3E" alt="Anaghaa Londhe" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Data Engineer with a deep passion for Generative AI technologies. 
+                        Currently working at Dish Network, I specialize in designing and deploying large-scale ETL pipelines 
+                        while integrating GenAI solutions like RAG architectures and LLM-powered systems that enhance traditional data workflows.
+                    </p>
+                    <p>
+                        As a data engineer, I build the robust infrastructure that powers AI applications - from data pipelines 
+                        that feed vector databases to cloud architectures that scale GenAI workloads. I'm particularly excited 
+                        about how generative AI is revolutionizing data engineering practices and creating new possibilities for intelligent automation.
+                    </p>
+                    <p>
+                        My approach combines solid data engineering fundamentals (ETL/ELT, cloud architecture, data governance) 
+                        with innovative GenAI applications (prompt engineering, embedding models, RAG systems) to solve complex 
+                        data challenges in smarter, more efficient ways.
+                    </p>
+                </div>
+                <div class="highlight-box">
+                    <h3>Quick Facts</h3>
+                    <p><strong>🏢 Current Role:</strong> Data Engineer at Dish Network</p>
+                    <p><strong>🎓 Education:</strong> Master's in Information Systems</p>
+                    <p><strong>🤖 Passion:</strong> GenAI & Large Language Models</p>
+                    <p><strong>☁️ Specialization:</strong> AWS Cloud Architecture</p>
+                    <p><strong>📍 Location:</strong> Austin, TX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Data Engineer</div>
+                        <div class="company">Dish Network</div>
+                    </div>
+                    <div class="duration">Jun 2022 - Current</div>
+                </div>
+                <ul>
+                    <li>Designed and deployed ETL pipelines in Databricks using PySpark and SQL, transforming 2TB+ of daily Redshift data into governed, query-optimized datasets</li>
+                    <li>Built and scaled a Retrieval Augmented Generation (RAG) architecture using OpenSearch, Lambda, Step Functions, and SQS—cutting internal search time by 50% and boosting generative AI use cases</li>
+                    <li>Orchestrated contract tracking architecture with NLP models and AWS services (Lambda, S3, DynamoDB), deployed via Terraform to ensure scalability and compliance</li>
+                    <li>Engineered Databricks Workflows and Delta Live Tables for automated, scalable transformations—enabling weekly ingestion and publishing of ML model outputs</li>
+                    <li>Deployed cloud-native data pipeline infrastructure with Terraform for AWS services like EKS, Kinesis Firehose, OpenSearch, CloudWatch, Glue, and Athena</li>
+                    <li>Enabled data democratization by abstracting raw model outputs into layered, consumable datasets—reducing time-to-insight for business stakeholders</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Data Visualization Intern</div>
+                        <div class="company">Black Diamond Therapeutics</div>
+                    </div>
+                    <div class="duration">Jul 2021 - Dec 2021</div>
+                </div>
+                <ul>
+                    <li>Planned and implemented a pipeline structure for direct data ingestion from AWS, utilizing Glue, S3, and Athena into visualization tools</li>
+                    <li>Developed an intuitive and interactive Power BI dashboard, driving a 30% improvement in data-driven decision-making capabilities</li>
+                    <li>Built dashboards using Matplotlib and Seaborn for cancer-related data, achieving 70% reduction in preparation time</li>
+                    <li>Created comprehensive documentation and tutorials for stakeholders and pipeline users</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">🤖 Recipe Generator - LLM Chatbot</div>
+                    <div class="project-description">
+                        <p>Designed and implemented a sophisticated Language Model chatbot utilizing the Falcon-7B model with advanced prompt engineering.</p>
+                        <ul>
+                            <li>Engineered prompt templates for recipe-related conversations</li>
+                            <li>Integrated seamless UI using Streamlit</li>
+                            <li>Orchestrated complete integration with Langchain</li>
+                            <li>Focused on natural conversational dialogue capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">🏗️ Data Warehousing: Integration & Query Formulation</div>
+                    <div class="project-description">
+                        <p>Comprehensive data warehousing project focusing on efficient data architecture and business intelligence.</p>
+                        <ul>
+                            <li>Converted raw data into optimized relational tables</li>
+                            <li>Designed streamlined snowflake schema in Pentaho</li>
+                            <li>Crafted complex SQL statements for business reporting</li>
+                            <li>Enhanced system performance and data retrieval efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">🔍 RAG Architecture Implementation</div>
+                    <div class="project-description">
+                        <p>Built and scaled enterprise-level Retrieval Augmented Generation system for enhanced search capabilities.</p>
+                        <ul>
+                            <li>Implemented using OpenSearch and AWS serverless services</li>
+                            <li>Cut internal search time by 50%</li>
+                            <li>Boosted generative AI use cases across organization</li>
+                            <li>Utilized Lambda, Step Functions, and SQS for scalability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🤖 GenAI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Large Language Models</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">RAG Architecture</span>
+                        <span class="skill-tag">Embedding Models</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Langchain</span>
+                        <span class="skill-tag">Vector Databases</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>☁️ AWS Cloud Services</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Lambda</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">RDS</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">SageMaker</span>
+                        <span class="skill-tag">Step Functions</span>
+                        <span class="skill-tag">CloudFormation</span>
+                        <span class="skill-tag">Kinesis</span>
+                        <span class="skill-tag">OpenSearch</span>
+                        <span class="skill-tag">Glue</span>
+                        <span class="skill-tag">Athena</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔧 Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">Delta Live Tables</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">Hadoop</span>
+                        <span class="skill-tag">Apache Superset</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💾 Databases & Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">AWS Aurora</span>
+                        <span class="skill-tag">BigQuery</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🛠️ Tools & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Bash Scripting</span>
+                        <span class="skill-tag">DBT</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📊 Visualization & BI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Pentaho</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+                            <div class="contact-content">
+                <p>I'm always excited to discuss how GenAI can transform data engineering practices, explore innovative data solutions, or collaborate on intelligent data systems!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <a href="mailto:anaghaalondhe7@gmail.com">anaghaalondhe7@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>📱 Phone</h4>
+                        <a href="tel:720-845-9115">720-845-9115</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>💼 LinkedIn</h4>
+                        <a href="https://linkedin.com/in/anaghaa-londhe" target="_blank">Connect with me</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>💻 GitHub</h4>
+                        <a href="https://github.com/anaghaalondhe" target="_blank">View my code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Dynamic typing effect for hero subtitle
+        const subtitle = document.querySelector('.hero .subtitle');
+        const titles = ['Data Engineer | GenAI Enthusiast', 'AI-Powered Data Architect', 'GenAI Data Pipeline Builder', 'Intelligent Systems Engineer'];
+        let currentIndex = 0;
+        
+        function typeWriter() {
+            subtitle.textContent = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+        }
+        
+        setInterval(typeWriter, 3000);
+    </script>
+</body>
+</html>
