@@ -578,7 +578,6 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Anaghaa Londhe</h1>
-                    <p class="subtitle">Data Science Engineer</p>
                     <p class="description">
                         Data Science Engineer passionate about building scalable data platforms and leveraging AI/ML to transform
                         how we process and analyze data. Currently open to new opportunities in Data Engineering, Analytics Engineering,
@@ -902,17 +901,6 @@
             observer.observe(section);
         });
 
-        // Dynamic typing effect for hero subtitle
-        const subtitle = document.querySelector('.hero .subtitle');
-        const titles = ['Data Science Engineer'];
-        let currentIndex = 0;
-
-        function typeWriter() {
-            subtitle.textContent = titles[currentIndex];
-            currentIndex = (currentIndex + 1) % titles.length;
-        }
-
-        setInterval(typeWriter, 3000);
     </script>
 </body>
 </html>
