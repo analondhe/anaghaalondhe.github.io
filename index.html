@@ -116,7 +116,7 @@
         .hero {
             background: linear-gradient(135deg, #2C5282 0%, #2D3748 100%);
             padding: 80px 0 100px;
-            text-align: left;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
@@ -139,44 +139,29 @@
 
         .hero-content {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            gap: 5rem;
-            flex-wrap: wrap;
+            gap: 1.5rem;
         }
 
         .hero-text {
-            flex: 1;
-            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
-            font-weight: 700;
-            letter-spacing: -2px;
+            font-weight: 500;
+            letter-spacing: -1px;
             line-height: 1.1;
             color: #ffffff;
         }
 
-        .hero .subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 400;
-        }
-
-        .hero .description {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.8;
-            max-width: 500px;
-        }
-
         .profile-image {
-            width: 280px;
-            height: 280px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center 55%;
@@ -194,19 +179,21 @@
             display: flex;
             gap: 1rem;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 24px;
+            padding: 9px 18px;
             border: none;
-            border-radius: 4px;
-            font-size: 0.95rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: 400;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
             display: inline-block;
+            letter-spacing: 0.3px;
         }
 
         .btn-primary {
@@ -218,7 +205,7 @@
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.8);
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
         }
 
         .btn:hover {
@@ -539,8 +526,8 @@
             }
 
             .profile-image {
-                width: 250px;
-                height: 250px;
+                width: 180px;
+                height: 180px;
             }
 
             .experience-header {
@@ -576,20 +563,15 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <img src="D9312732-0678-44D9-8909-76733350F229_1_105_c.jpeg" alt="Anaghaa Londhe" class="profile-image">
                 <div class="hero-text">
                     <h1>Anaghaa Londhe</h1>
-                    <p class="description">
-                        Data Science Engineer passionate about building scalable data platforms and leveraging AI/ML to transform
-                        how we process and analyze data. Currently open to new opportunities in Data Engineering, Analytics Engineering,
-                        and Data Science Engineering roles.
-                    </p>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="AnaghaaLondhe_new.pdf" download="Anaghaa_Londhe_Resume.pdf" class="btn btn-secondary">Download Resume</a>
                         <a href="https://linkedin.com/in/anaghaa-londhe" class="btn btn-secondary" target="_blank">LinkedIn</a>
                     </div>
                 </div>
-                <img src="D9312732-0678-44D9-8909-76733350F229_1_105_c.jpeg" alt="Anaghaa Londhe" class="profile-image">
             </div>
         </div>
     </section>
@@ -600,11 +582,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a Data Science Engineer with a passion for building scalable data platforms and leveraging AI/ML technologies.
-                        Most recently at Dish Network, I built unified data platforms, scalable ETL pipelines processing
-                        billions of records daily, and implemented data governance with medallion architecture on Databricks.
+                        Data Science Engineer passionate about building scalable data platforms and leveraging AI/ML to transform
+                        how we process and analyze data. Currently open to new opportunities in Data Engineering, Analytics Engineering,
+                        and Data Science Engineering roles.
                     </p>
                     <p>
+                        Most recently at Dish Network, I built unified data platforms, scalable ETL pipelines processing
+                        billions of records daily, and implemented data governance with medallion architecture on Databricks.
                         I also build infrastructure that powers AI applications—from RAG search systems using Amazon Bedrock
                         and OpenSearch to multi-agent systems using A2A protocol across frameworks like CrewAI, AWS Strands, and Databricks Agents.
                     </p>
