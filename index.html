@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Anaghaa Londhe - Data Science Engineer</title>
     <style>
         * {
@@ -22,7 +23,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             background: #FFFAF0;
@@ -159,9 +160,10 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            font-weight: 500;
+            font-weight: 700;
             letter-spacing: -1px;
             line-height: 1.1;
             color: #FFFAF0;
@@ -185,49 +187,51 @@
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 0.5rem;
         }
 
         .btn {
-            padding: 9px 18px;
+            font-family: 'Space Mono', monospace;
+            padding: 0;
             border: none;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            background: none;
+            font-size: 0.8rem;
             font-weight: 400;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
             display: inline-block;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+            text-transform: lowercase;
+            position: relative;
         }
 
         .btn-primary {
-            background: #FFFAF0;
-            color: var(--primary);
-            font-weight: 500;
+            color: #FFFAF0;
+            border-bottom: 1px solid rgba(255, 250, 240, 0.5);
+            padding-bottom: 2px;
         }
 
         .btn-secondary {
-            background: transparent;
-            color: #FFFAF0;
-            border: 1.5px solid rgba(255, 250, 240, 0.6);
+            color: rgba(255, 250, 240, 0.6);
         }
 
         .btn:hover {
-            transform: translateY(-1px);
+            transform: none;
         }
 
         .btn-primary:hover {
-            background: var(--bg-light);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-bottom-color: #FFFAF0;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 250, 240, 0.1);
-            border-color: #FFFAF0;
+            color: #FFFAF0;
+            border-bottom: 1px solid rgba(255, 250, 240, 0.5);
+            padding-bottom: 2px;
         }
 
         /* Section Styles */
@@ -241,11 +245,12 @@
         }
 
         .section-title {
-            font-size: 2rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 1.6rem;
             margin-bottom: 2.5rem;
             color: var(--text-primary);
             font-weight: 700;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             position: relative;
             display: inline-block;
         }
@@ -291,10 +296,11 @@
         }
 
         .highlight-box h3 {
-            font-size: 1.1rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .highlight-box p {
@@ -308,72 +314,132 @@
         }
 
         /* Experience Section */
-        .experience-item {
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border);
-            position: relative;
+        .experience-role {
+            margin-bottom: 3rem;
         }
 
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 2rem;
-            width: 4px;
-            height: 40px;
-            background: var(--primary);
-            border-radius: 2px;
+        .experience-role:last-child {
+            margin-bottom: 0;
         }
 
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-header {
+        .role-header {
             display: flex;
             justify-content: space-between;
-            align-items: start;
+            align-items: center;
             margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
             flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        .job-title {
-            font-size: 1.25rem;
-            font-weight: 600;
+        .role-header .job-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 0.25rem;
         }
 
-        .company {
+        .role-header .company {
             color: var(--primary);
             font-weight: 500;
             font-size: 1.05rem;
         }
 
-        .duration {
+        .role-header .duration {
             color: var(--text-secondary);
             font-size: 0.9rem;
-            opacity: 0.8;
+            background: var(--bg-light);
+            padding: 4px 12px;
+            border-radius: 12px;
         }
 
-        .experience-item ul {
-            list-style: none;
-            padding-left: 0;
+        .metrics-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        .experience-item li {
+        .metric {
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+
+        .metric-value {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .work-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .work-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            border-left: 3px solid var(--primary);
+            transition: all 0.2s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(122, 158, 126, 0.15);
+        }
+
+        .work-card-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
+        }
+
+        .work-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .work-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
             position: relative;
             color: var(--text-secondary);
-            line-height: 1.7;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
 
-        .experience-item li::before {
-            content: '—';
-            color: #ccc;
+        .work-card li::before {
+            content: '';
             position: absolute;
             left: 0;
+            top: 8px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .work-card li:last-child {
+            margin-bottom: 0;
         }
 
         /* Projects Section */
@@ -442,10 +508,11 @@
         }
 
         .skill-category h3 {
+            font-family: 'Space Mono', monospace;
             color: var(--text-primary);
             margin-bottom: 1rem;
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 700;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--primary);
             display: inline-block;
@@ -564,10 +631,11 @@
         }
 
         .scroll-indicator span {
-            font-size: 0.7rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
             color: rgba(255, 250, 240, 0.6);
             letter-spacing: 2px;
-            text-transform: uppercase;
+            text-transform: lowercase;
         }
 
         .scroll-indicator .arrow {
@@ -634,6 +702,7 @@
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="AnaghaaLondhe_new.pdf" download="Anaghaa_Londhe_Resume.pdf" class="btn btn-secondary">Download Resume</a>
                         <a href="https://linkedin.com/in/anaghaa-londhe" class="btn btn-secondary" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/analondhe" class="btn btn-secondary" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -679,41 +748,96 @@
         <div class="container">
             <div><h2 class="section-title">Professional Experience</h2></div>
 
-            <div class="experience-item">
-                <div class="experience-header">
+            <div class="experience-role">
+                <div class="role-header">
                     <div>
                         <div class="job-title">Data Science Engineer</div>
                         <div class="company">Dish Network</div>
                     </div>
                     <div class="duration">Jun 2022 - Nov 2025</div>
                 </div>
-                <ul>
-                    <li>Built a unified data platform using Delta Lake and Amazon Redshift; created Python-based PySpark ETL pipelines processing billions of records daily, cutting analysis time by 40% for retention teams</li>
-                    <li>Built scalable ETL system using Python, PySpark, and Databricks Delta Live Tables to transform model outputs into analysis-ready datasets for cross-functional teams</li>
-                    <li>Implemented data governance using Unity Catalog with medallion architecture (bronze-silver-gold), enabling self-service analytics for 10+ teams on Databricks</li>
-                    <li>Improved SQL query performance by 60% using materialized views, partitioning, and window functions</li>
-                    <li>Created proof of concept to test A2A (Agent-to-Agent) protocol communication between AI frameworks, evaluating interoperability across multi-agent systems (Amazon Bedrock Agents, CrewAI, AWS Strands, Databricks Agents)</li>
-                    <li>Implemented MLflow to monitor traces and logs of agent-based systems, providing visibility into agent interactions and execution flows across AI frameworks</li>
-                    <li>Built proof of concept RAG search system using Amazon Bedrock and OpenSearch, reducing response time by 50% through optimized vector storage and AWS Step Functions</li>
-                    <li>Developed proof of concept NLP contract analysis tool using cosine similarity, Levenshtein distance, and Jaccard index algorithms on AWS Lambda and Amazon RDS to compare incoming documents with existing contracts in real-time via REST APIs</li>
-                    <li>Set up ELK stack (Elasticsearch, Logstash, Kibana) on AWS to monitor and analyze logs from Amazon EKS clusters; created real-time dashboards for Kubernetes observability</li>
-                </ul>
+
+                <div class="metrics-row">
+                    <div class="metric">
+                        <span class="metric-value">40%</span>
+                        <span class="metric-label">Faster Analysis</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">60%</span>
+                        <span class="metric-label">Query Optimization</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">50%</span>
+                        <span class="metric-label">Faster Search</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">10+</span>
+                        <span class="metric-label">Teams Enabled</span>
+                    </div>
+                </div>
+
+                <div class="work-categories">
+                    <div class="work-card">
+                        <div class="work-card-title">Data Platform & ETL</div>
+                        <ul>
+                            <li>Built unified data platform using Delta Lake and Amazon Redshift with PySpark ETL pipelines processing billions of records daily</li>
+                            <li>Built scalable ETL system using Python, PySpark, and Databricks Delta Live Tables for cross-functional teams</li>
+                            <li>Implemented data governance using Unity Catalog with medallion architecture (bronze-silver-gold) on Databricks</li>
+                            <li>Improved SQL query performance by 60% using materialized views, partitioning, and window functions</li>
+                        </ul>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-card-title">AI / ML & Agents</div>
+                        <ul>
+                            <li>Created POC testing A2A protocol communication across multi-agent systems (Bedrock Agents, CrewAI, AWS Strands, Databricks Agents)</li>
+                            <li>Implemented MLflow to monitor traces and logs of agent-based systems across AI frameworks</li>
+                            <li>Built RAG search system using Amazon Bedrock and OpenSearch, reducing response time by 50%</li>
+                            <li>Developed NLP contract analysis tool using cosine similarity, Levenshtein distance, and Jaccard index on AWS Lambda</li>
+                        </ul>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-card-title">Infrastructure & Observability</div>
+                        <ul>
+                            <li>Set up ELK stack (Elasticsearch, Logstash, Kibana) on AWS for log monitoring from Amazon EKS clusters</li>
+                            <li>Created real-time dashboards for Kubernetes observability</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-header">
+            <div class="experience-role">
+                <div class="role-header">
                     <div>
                         <div class="job-title">Data Visualization Intern</div>
                         <div class="company">Black Diamond Therapeutics</div>
                     </div>
                     <div class="duration">Jul 2021 - Dec 2021</div>
                 </div>
-                <ul>
-                    <li>Planned and implemented a pipeline structure for direct data ingestion from AWS, utilizing Glue, S3, and Athena into visualization tools</li>
-                    <li>Developed an intuitive and interactive Power BI dashboard, driving a 30% improvement in data-driven decision-making capabilities</li>
-                    <li>Built dashboards using Matplotlib and Seaborn for cancer-related data, achieving 70% reduction in preparation time</li>
-                    <li>Created comprehensive documentation and tutorials for stakeholders and pipeline users</li>
-                </ul>
+
+                <div class="metrics-row">
+                    <div class="metric">
+                        <span class="metric-value">30%</span>
+                        <span class="metric-label">Better Decisions</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">70%</span>
+                        <span class="metric-label">Faster Prep</span>
+                    </div>
+                </div>
+
+                <div class="work-categories">
+                    <div class="work-card">
+                        <div class="work-card-title">Data Pipeline & Visualization</div>
+                        <ul>
+                            <li>Implemented pipeline for direct data ingestion from AWS using Glue, S3, and Athena into visualization tools</li>
+                            <li>Developed interactive Power BI dashboard driving 30% improvement in data-driven decision-making</li>
+                            <li>Built dashboards using Matplotlib and Seaborn for cancer-related data, achieving 70% reduction in prep time</li>
+                            <li>Created comprehensive documentation and tutorials for stakeholders and pipeline users</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -913,7 +1037,7 @@
 
                     <div class="contact-item">
                         <h4>GitHub</h4>
-                        <a href="https://github.com/anaghaalondhe" target="_blank">View my code</a>
+                        <a href="https://github.com/analondhe" target="_blank">View my code</a>
                     </div>
                 </div>
             </div>
