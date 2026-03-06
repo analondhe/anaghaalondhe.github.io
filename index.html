@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Anaghaa Londhe - Data Science Engineer</title>
+    <title>Anaghaa Londhe - Data Engineer</title>
     <style>
         * {
             margin: 0;
@@ -700,8 +700,8 @@
                     <h1>Anaghaa Londhe</h1>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="AnaghaaLondhe_new.pdf" download="Anaghaa_Londhe_Resume.pdf" class="btn btn-secondary">Download Resume</a>
-                        <a href="https://linkedin.com/in/anaghaa-londhe" class="btn btn-secondary" target="_blank">LinkedIn</a>
+                        <a href="AnaghaaLondhe_Resume_DE.pdf" download="Anaghaa_Londhe_Resume.pdf" class="btn btn-secondary">Download Resume</a>
+                        <a href="https://linkedin.com/in/analondhe" class="btn btn-secondary" target="_blank">LinkedIn</a>
                         <a href="https://github.com/analondhe" class="btn btn-secondary" target="_blank">GitHub</a>
                     </div>
                 </div>
@@ -720,23 +720,23 @@
                     <h2 class="section-title">About Me</h2>
                     <div class="about-text">
                     <p>
-                        Data Science Engineer passionate about building scalable data platforms and leveraging AI/ML to transform
-                        how we process and analyze data. Currently open to new opportunities in Data Engineering, Analytics Engineering,
-                        and Data Science Engineering roles.
+                        Data Engineer passionate about building scalable data platforms and leveraging AI/ML to transform
+                        how we process and analyze data. Currently open to new opportunities in Data Engineering and Analytics Engineering roles.
                     </p>
                     <p>
-                        Most recently at Dish Network, I built unified data platforms, scalable ETL pipelines processing
-                        billions of records daily, and implemented data governance with medallion architecture on Databricks.
-                        I also build infrastructure that powers AI applications—from RAG search systems using Amazon Bedrock
-                        and OpenSearch to multi-agent systems using A2A protocol across frameworks like CrewAI, AWS Strands, and Databricks Agents.
+                        Most recently at Dish Network, I designed dimensional data models, built unified data platforms,
+                        and implemented scalable ETL/ELT pipelines processing billions of records daily with data governance
+                        and lineage tracking on Databricks. I also build infrastructure that powers AI applications—from
+                        RAG search systems using Amazon Bedrock and OpenSearch to multi-agent systems using A2A protocol
+                        across frameworks like CrewAI, AWS Strands, and Databricks Agents.
                     </p>
                     </div>
                 </div>
                 <div class="highlight-box">
                     <h3>Quick Facts</h3>
-                    <p><strong>Recent Role:</strong> Data Science Engineer at Dish Network</p>
+                    <p><strong>Recent Role:</strong> Data Engineer at Dish Network</p>
                     <p><strong>Status:</strong> Open to new opportunities</p>
-                    <p><strong>Education:</strong> MS in Information Systems, BE in Computer Science</p>
+                    <p><strong>Education:</strong> MS in Information Systems</p>
                     <p><strong>Certification:</strong> AWS Solutions Architect Associate</p>
                     <p><strong>Location:</strong> Austin, TX</p>
                 </div>
@@ -751,7 +751,7 @@
             <div class="experience-role">
                 <div class="role-header">
                     <div>
-                        <div class="job-title">Data Science Engineer</div>
+                        <div class="job-title">Data Engineer</div>
                         <div class="company">Dish Network</div>
                     </div>
                     <div class="duration">Jun 2022 - Nov 2025</div>
@@ -780,10 +780,11 @@
                     <div class="work-card">
                         <div class="work-card-title">Data Platform & ETL</div>
                         <ul>
-                            <li>Built unified data platform using Delta Lake and Amazon Redshift with PySpark ETL pipelines processing billions of records daily</li>
-                            <li>Built scalable ETL system using Python, PySpark, and Databricks Delta Live Tables for cross-functional teams</li>
-                            <li>Implemented data governance using Unity Catalog with medallion architecture (bronze-silver-gold) on Databricks</li>
+                            <li>Built unified data platform using Delta Lake and Amazon Redshift; designed PySpark ETL/ELT pipelines processing billions of records daily, cutting analysis time by 40%</li>
+                            <li>Designed dimensional data models and built scalable ELT pipelines using Python, PySpark, and Databricks Delta Live Tables; transformed raw data into fact and dimension tables</li>
+                            <li>Implemented data governance and data lineage tracking using Unity Catalog with medallion architecture (bronze-silver-gold) on Databricks, enabling self-service analytics for 10+ teams</li>
                             <li>Improved SQL query performance by 60% using materialized views, partitioning, and window functions</li>
+                            <li>Authored SQL transformations, views, and business logic models in Databricks SQL Warehouse, enabling self-service reporting across teams</li>
                         </ul>
                     </div>
 
@@ -793,7 +794,6 @@
                             <li>Created POC testing A2A protocol communication across multi-agent systems (Bedrock Agents, CrewAI, AWS Strands, Databricks Agents)</li>
                             <li>Implemented MLflow to monitor traces and logs of agent-based systems across AI frameworks</li>
                             <li>Built RAG search system using Amazon Bedrock and OpenSearch, reducing response time by 50%</li>
-                            <li>Developed NLP contract analysis tool using cosine similarity, Levenshtein distance, and Jaccard index on AWS Lambda</li>
                         </ul>
                     </div>
 
@@ -847,7 +847,20 @@
             <div><h2 class="section-title">Featured Projects</h2></div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-title">Cancer Insights Analytics: dbt Data Transformation</div>
+                    <div class="project-title">Spotify Podcast Analytics Pipeline</div>
+                    <div class="project-description">
+                        <p>End-to-end data pipeline ingesting daily Spotify podcast chart data across 40+ countries (800K+ rows), orchestrated with Apache Airflow.</p>
+                        <ul>
+                            <li>Built pipeline ingesting from Kaggle, loading into DuckDB, and orchestrating with Apache Airflow on a daily schedule</li>
+                            <li>Designed multi-layer dbt architecture (staging, intermediate, marts) with country code and World Bank population seeds for per-capita analysis</li>
+                            <li>Engineered fact and dimension tables covering regional content mix, show-level performance, and publisher reach using dbt incremental models</li>
+                            <li>Containerized full pipeline with Docker; enforced data quality with dbt schema tests and data lineage documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Cancer Insights Analytics</div>
                     <div class="project-description">
                         <p>Built a dbt project with layered architecture to transform raw lung cancer patient data into analysis-ready datasets.</p>
                         <ul>
@@ -904,34 +917,34 @@
             <div><h2 class="section-title">Technical Skills</h2></div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming</h3>
+                    <h3>Languages</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>ML/AI</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">LLM</span>
-                        <span class="skill-tag">Generative AI</span>
-                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">Apache Spark</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3>Data Engineering</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Apache Spark</span>
-                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">Apache Airflow</span>
                         <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Delta Live Tables</span>
+                        <span class="skill-tag">DuckDB</span>
                         <span class="skill-tag">Snowflake</span>
                         <span class="skill-tag">Redshift</span>
-                        <span class="skill-tag">ETL/ELT</span>
-                        <span class="skill-tag">Data Pipeline</span>
                         <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Kinesis</span>
+                        <span class="skill-tag">ETL/ELT</span>
+                        <span class="skill-tag">Dimensional Modeling</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">Incremental Models</span>
+                        <span class="skill-tag">Data Lineage</span>
+                        <span class="skill-tag">Apache Iceberg</span>
+                        <span class="skill-tag">Apache Flink</span>
                     </div>
                 </div>
 
@@ -939,6 +952,14 @@
                     <h3>Cloud & DevOps</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">Lambda</span>
+                        <span class="skill-tag">Bedrock</span>
+                        <span class="skill-tag">Glue</span>
+                        <span class="skill-tag">EMR</span>
+                        <span class="skill-tag">Kinesis</span>
+                        <span class="skill-tag">CloudWatch</span>
+                        <span class="skill-tag">SageMaker</span>
                         <span class="skill-tag">Azure</span>
                         <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Kubernetes</span>
@@ -949,27 +970,15 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>AWS Services</h3>
+                    <h3>AI & ML</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Lambda</span>
-                        <span class="skill-tag">Bedrock</span>
-                        <span class="skill-tag">SageMaker</span>
-                        <span class="skill-tag">S3</span>
-                        <span class="skill-tag">EC2</span>
-                        <span class="skill-tag">Glue</span>
-                        <span class="skill-tag">EMR</span>
-                        <span class="skill-tag">Kinesis</span>
-                        <span class="skill-tag">CloudWatch</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Data Science</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">LLM Orchestration</span>
                         <span class="skill-tag">MLflow</span>
-                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">CrewAI</span>
+                        <span class="skill-tag">Claude Code</span>
                     </div>
                 </div>
 
@@ -992,20 +1001,8 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>Workflow Tools</h3>
+                    <h3>Certifications</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Apache Airflow</span>
-                        <span class="skill-tag">dbt</span>
-                        <span class="skill-tag">Langchain</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Methodologies & Certifications</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">MLOps</span>
-                        <span class="skill-tag">Data Governance</span>
                         <span class="skill-tag">AWS Solutions Architect Associate</span>
                     </div>
                 </div>
@@ -1017,7 +1014,7 @@
         <div class="container">
             <div><h2 class="section-title">Let's Connect</h2></div>
                             <div class="contact-content">
-                <p>I'm actively looking for new opportunities as a Data Engineer, Analytics Engineer, or Data Science Engineer. If you have an opening or would like to discuss how I can contribute to your team, I'd love to connect!</p>
+                <p>I'm actively looking for new opportunities as a Data Engineer or Analytics Engineer. If you have an opening or would like to discuss how I can contribute to your team, I'd love to connect!</p>
 
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1032,7 +1029,7 @@
 
                     <div class="contact-item">
                         <h4>LinkedIn</h4>
-                        <a href="https://linkedin.com/in/anaghaa-londhe" target="_blank">Connect with me</a>
+                        <a href="https://linkedin.com/in/analondhe" target="_blank">Connect with me</a>
                     </div>
 
                     <div class="contact-item">
