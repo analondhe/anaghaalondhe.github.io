@@ -31,7 +31,7 @@
 #align(center, text(size: 9.5pt)[
   720-845-9115 |
   #link("mailto:anaghaalondhe7@gmail.com")[anaghaalondhe7\@gmail.com] |
-  #link("https://linkedin.com/in/analondhe")[linkedin.com/in/analondhe] |
+  #link("https://linkedin.com/in/anaghaa-londhe")[linkedin.com/in/anaghaa-londhe] |
   #link("https://github.com/analondhe")[github.com/analondhe] |
   Austin, TX
 ])
