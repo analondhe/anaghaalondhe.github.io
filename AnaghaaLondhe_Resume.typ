@@ -36,43 +36,31 @@
   Austin, TX
 ])
 
-// --- Education ---
-== Education
-
-#entry(
-  [*University of Colorado Denver* #h(1fr) Denver, CO],
-  [],
-)
-#entry(
-  [_Master of Science in Information Systems_],
-  [Jan 2020 -- May 2022],
-)
-
 // --- Experience ---
 == Experience
 
 #entry(
-  [*Data Engineer*],
+  [*Data Engineer | Databricks · AWS · PySpark · Delta Lake*],
   [Jun 2022 -- Nov 2025],
 )
 #entry(
   [_Dish Network_],
   [Denver, CO],
 )
-- Built a unified data platform using Delta Lake and Amazon Redshift; designed and implemented Python-based Apache Spark (PySpark) ETL/ELT pipelines processing billions of records daily, cutting analysis time by 40% for retention teams
-- Designed dimensional data models and built scalable ELT pipelines using Python, Apache Spark (PySpark), and Databricks Delta Live Tables; transformed raw data into analysis-ready fact and dimension tables for cross-functional analytics teams
+- Built a unified data platform using Delta Lake and Amazon Redshift; designed and implemented Python-based Apache Spark (PySpark) ETL pipelines processing billions of records daily, cutting analysis time by 40% for retention teams
+- Designed dimensional data models and built scalable ETL pipelines using Python, Apache Spark (PySpark), and Databricks Delta Live Tables; transformed raw data into analysis-ready fact and dimension tables for cross-functional analytics teams
 - Implemented data governance and data lineage tracking using Unity Catalog with medallion architecture (bronze-silver-gold), enabling self-service analytics and data warehouse access for 10+ teams on Databricks
-- Improved SQL query performance by 60% using materialized views, partitioning, and window functions
+- Improved SQL query performance by 60% through materialized views, partitioning, and window functions, accelerating reporting cycles for analysts and product stakeholders
 - Authored SQL transformations, views, and business logic models in Databricks SQL Warehouse to surface analysis-ready datasets for analysts and product stakeholders, enabling self-service reporting across teams
-- Created proof of concept to test A2A (Agent-to-Agent) protocol communication between AI frameworks, evaluating interoperability across multi-agent systems (Amazon Bedrock Agents, CrewAI, AWS Strands, Databricks Agents)
+- Created proof of concept to test A2A (Agent-to-Agent) protocol communication between 4 AI frameworks (Amazon Bedrock Agents, CrewAI, AWS Strands, Databricks Agents), evaluating interoperability across multi-agent systems
 - Implemented MLflow to monitor traces and logs of agent-based systems, providing visibility into agent interactions and execution flows across AI frameworks
 - Built proof of concept RAG search system using Amazon Bedrock and OpenSearch, reducing response time by 50% through optimized vector storage and AWS Step Functions
-- Set up ELK stack (Elasticsearch, Logstash, Kibana) on AWS to monitor and analyze logs from Amazon EKS clusters; created real-time dashboards for Kubernetes observability
+- Set up ELK stack (Elasticsearch, Logstash, Kibana) on AWS to monitor and analyze logs from Amazon EKS clusters, enabling real-time observability across Kubernetes microservices
 
 #v(2pt)
 
 #entry(
-  [*Data Visualization Intern*],
+  [*Data Visualization Intern | AWS · Power BI · Apache Superset*],
   [Jul 2021 -- Dec 2021],
 )
 #entry(
@@ -103,9 +91,21 @@
 == Technical Skills
 
 - *Languages:* Python, SQL, PySpark, Apache Spark
-- *Data Engineering:* dbt, Apache Airflow, Databricks, Delta Live Tables, DuckDB, Snowflake, Redshift, Kafka, Kinesis, ETL/ELT, Dimensional Modeling, Data Modeling, Incremental Models, Data Lineage, Apache Iceberg, Apache Flink
+- *Data Engineering:* dbt, Apache Airflow, Databricks, Delta Live Tables, DuckDB, Snowflake, Redshift, Kafka, Kinesis, ETL, Dimensional Modeling, Data Modeling, Incremental Models, Data Lineage, Apache Iceberg, Apache Flink
 - *Cloud & DevOps:* AWS (S3, Lambda, Bedrock, Glue, EMR, Kinesis, CloudWatch, SageMaker), Azure, Docker, Kubernetes, Terraform, Git, CI/CD
 - *AI & ML:* LangChain, RAG, LLM Orchestration, MLflow, Generative AI, CrewAI, Claude Code
 - *Databases:* MySQL, PostgreSQL, DynamoDB, OpenSearch
 - *Visualization:* Tableau, Power BI
 - *Certifications:* AWS Solutions Architect Associate
+
+// --- Education ---
+== Education
+
+#entry(
+  [*University of Colorado Denver*],
+  [Jan 2020 -- May 2022],
+)
+#entry(
+  [_Master of Science in Information Systems_],
+  [Denver, CO],
+)
